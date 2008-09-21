@@ -60,7 +60,8 @@
 
     ,blank: function() {
       return this.text().match(/^\s*$/);
-    }  
+    }
+  
     ,remove_if_empty: function() {
       return this.if_empty(function() {this.remove();});
     }
