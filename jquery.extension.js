@@ -35,8 +35,7 @@
     }
     
     ,remove_class_on_all_children_and_self: function(cls) {
-      this.find('.'+cls).removeClass(cls);
-      this.removeClass(cls);
+      this.find('.'+cls).andSelf().removeClass(cls);
       return this;
     }
     
