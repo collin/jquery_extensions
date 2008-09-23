@@ -30,10 +30,6 @@
       return this.removeClass('empty');
     }
     
-    ,clear: function() {
-      return this.html('');
-    }
-    
     ,remove_class_on_all_children_and_self: function(cls) {
       this.find('.'+cls).andSelf().removeClass(cls);
       return this;
@@ -80,4 +76,6 @@
       return this;
     }
   });
+
+  _.fn.clear = _.fn.empty;
 })(jQuery);
