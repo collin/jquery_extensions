@@ -44,13 +44,13 @@
     }
     
     ,size_to_fit: function() {
-      return this.attr('size', this.val().length || 1);
+      return this.attr('size', this.val().length + 1 || 1);
     }
     
     ,keypress_size_to_fit: function() {
       return this.keypress(function(e) {
         var _this = _(this);
-        setTimout(function() {_this.size_to_fit();}, 0);
+        setTimeout(function() {_this.size_to_fit();}, 0);
       });
     }
 
