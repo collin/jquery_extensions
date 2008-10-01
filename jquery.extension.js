@@ -30,13 +30,8 @@
       return this.removeClass('empty');
     }
     
-    ,clear: function() {
-      return this.html('');
-    }
-    
     ,remove_class_on_all_children_and_self: function(cls) {
-      this.find('.'+cls).removeClass(cls);
-      this.removeClass(cls);
+      this.find('.'+cls).andSelf().removeClass(cls);
       return this;
     }
     
@@ -60,7 +55,8 @@
 
     ,blank: function() {
       return this.text().match(/^\s*$/);
-    }  
+    }
+  
     ,remove_if_empty: function() {
       return this.if_empty(function() {this.remove();});
     }
@@ -80,4 +76,6 @@
       return this;
     }
   });
+
+  _.fn.clear = _.fn.empty;
 })(jQuery);
