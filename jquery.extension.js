@@ -52,8 +52,8 @@
       return this.attr('size', this.val().length || 1);
     }
     
-    ,keyup_size_to_fit: function() {
-      return this.keyup(function(e) {
+    ,keypress_size_to_fit: function() {
+      return this.keypress(function(e) {
         _(this).size_to_fit();
       });
     }
