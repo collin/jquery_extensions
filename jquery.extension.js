@@ -49,7 +49,8 @@
     
     ,keypress_size_to_fit: function() {
       return this.keypress(function(e) {
-        _(this).size_to_fit();
+        var _this = _(this);
+        setTimout(function() {_this.size_to_fit();}, 0);
       });
     }
 
