@@ -72,8 +72,17 @@
       return this;
     }
     
-    ,log: function() {
-      console.log(this[0]);
+    ,replace: function(replacement) {
+      return this.map(function() {
+        _(this)
+          .after(replacement)
+          .remove();
+        return this;
+      });
+    }
+    
+    ,log: function(msg) {
+      console.log(this[0], msg);
       return this;
     }
   });
