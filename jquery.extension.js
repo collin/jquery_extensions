@@ -99,7 +99,6 @@
         && String.fromCharCode(e.which).match(expr)) e.preventDefault();
       });
     }
-  }
   });
 
   _.fn.clear = _.fn.empty;
