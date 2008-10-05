@@ -90,12 +90,14 @@
       return this.keypress(function(e) {
         if( e.charCode > 0 
         && !String.fromCharCode(e.which).match(expr)) e.preventDefault();
+      });
     }
     
     ,blacklist: function(expr) {
       return this.keypress(function(e) {
         if( e.charCode > 0 
         && String.fromCharCode(e.which).match(expr)) e.preventDefault();
+      });
     }
   }
   });
