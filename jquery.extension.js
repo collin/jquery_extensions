@@ -34,15 +34,7 @@
       this.find('.'+cls).andSelf().removeClass(cls);
       return this;
     }
-    
-    ,dragstart: function(fn) {
-      return this.bind('dragstart', fn);
-    }
-    
-    ,dragend: function(fn) {
-      return this.bind('dragend', fn);
-    }
-    
+
     ,size_to_fit: function() {
       return this.attr('size', this.val().length + 1 || 1);
     }
