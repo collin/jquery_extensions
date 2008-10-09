@@ -85,7 +85,7 @@
     }
     
     ,log: function(msg) {
-      console.log(this[0], msg||'');
+      console.log.apply(console, [this].concat(arguments));
       return this;
     }
     
