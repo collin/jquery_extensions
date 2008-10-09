@@ -71,11 +71,14 @@
       this.find('input').blur();
       return this;
     }
-    
+ 
     ,replace: function(replacement) {
       return this.map(function() {
         _(this)
           .after(replacement)
+          .find(':input')
+            .blur()
+            .end()
           .remove();
         return this;
       });
